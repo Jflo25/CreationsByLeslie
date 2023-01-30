@@ -4,7 +4,7 @@ import { AiOutlineMail } from 'react-icons/ai'
 
 const Hero = () => {
   return (
-    <div className='w-11/12 xl:w-4/5 h-[350px] m-auto bg-[#f5d9e3] rounded-3xl'>
+    <div className='w-11/12 xl:w-4/5 h-[350px] m-auto bg-indigo-200 rounded-3xl'>
       <div className='w-full h-full flex justify-center'>
         <div className='w-11/112 xl:w-1/2 p-5 space-y-5'>
           <h1 className='text-6xl  font-logo'>Creations by Leslie</h1>

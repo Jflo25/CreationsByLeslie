@@ -44,3 +44,34 @@
     animation-play-state: paused;
   }
 }
+
+.font-logo {
+  @apply text-4xl md:text-4xl lg:text-5xl 2xl:text-6xl 
+}
+
+li {
+  @apply font-page text-3xl md:text-2xl 
+}
+
+.nav-list li {
+  @apply font-page md:text-2xl lg:text-3xl 2xl:text-4xl pr-5 underline underline-offset-4
+}
+
+
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    @apply flex flex-col w-[100%] top-[-100vh] left-0 absolute justify-between bg-slate-300
+    duration-300 p-0 text-black font-page
+  }
+  
+  .mobile-nav li {
+    @apply p-4 m-1 
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-Icon {
+   @apply left-[175px]
+  }
+}

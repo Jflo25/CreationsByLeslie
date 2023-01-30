@@ -6,11 +6,11 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 const Footer = () => {
   return (
-    <div className=' w-[90%] h-[450px] mx-auto bg-[#f5d9e3] rounded-3xl flex flex-col mt-10'>
+    <div className=' w-[90%] h-[450px] mx-auto bg-indigo-200 rounded-3xl flex flex-col mt-10'>
                   {/* Links */}
       <div className="footer-top flex mt-10">
         <div className="footer-links  mx-auto ">
-          <h1 className='font-header font-page '>Links</h1>
+          <h1 className='footer-links font-page font-4xl'>Links</h1>
           <div className="center  hover:scale-110">
               <Link to="/" className='font-page'>Home</Link> 
             </div>
