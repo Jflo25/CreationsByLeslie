@@ -10,15 +10,15 @@ const Footer = () => {
                   {/* Links */}
       <div className="footer-top flex mt-10">
         <div className="footer-links  mx-auto ">
-          <h1 className='footer-links font-page font-4xl'>Links</h1>
+          <h1 className='footer-links font-page text-4xl'>Links</h1>
           <div className="center  hover:scale-110">
-              <Link to="/" className='font-page'>Home</Link> 
+              <Link to="/" className='font-page text-2xl'>Home</Link> 
             </div>
             <div className="center  hover:scale-110">
-              <Link to="/About" className='font-page'>About</Link> 
+              <Link to="/About" className='font-page text-2xl'>About</Link> 
             </div>
             <div className="center  hover:scale-110">
-              <Link to="/Contact" className='font-page'>Contact</Link> 
+              <Link to="/Contact" className='font-page text-2xl'>Contact</Link> 
             </div>
         </div>
                              {/* logo  */}
