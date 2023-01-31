@@ -46,7 +46,11 @@
 }
 
 .font-logo {
-  @apply text-4xl md:text-4xl lg:text-5xl 2xl:text-6xl 
+  @apply text-base font-black md:text-4xl lg:text-5xl 2xl:text-6xl 
+}
+
+.font-hero {
+  @apply font-logo2 text-3xl 
 }
 
 li {
@@ -74,4 +78,12 @@ li {
   .cart-Icon {
    @apply left-[175px]
   }
-}
+} 
+          /* mobile responsive layout */
+
+
+  /* featured products card */
+
+  .mobile-card {
+    @apply w-[300px]
+  }

@@ -18,10 +18,10 @@ const Navbar = () => {
   };
  
   return (
-    <div className='navbar-container pb-20 max-w-[90%] mx-auto'>
-    <div className='flex justify-between items-center h-20 px-4 absolute z-10 w-[90%] '>
+    <div className='navbar-container pb-20 max-w-[85%] mx-auto'>
+    <div className='flex justify-between items-center h-20 px-4 absolute z-10 w-[80%] '>
 <div>
-  <h1 onClick={handleNav} className={logo ? 'hidden' : 'font-logo'}>Creations by Leslie</h1>
+  <h1 onClick={handleNav} className={logo ? 'hidden' : 'font-logo '}>Creations by Leslie</h1>
 </div>
 <ul className='nav-list hidden md:flex font-page  '>
     <Link to='/' smooth={true} duration={500}><li className=''>Home</li></Link>

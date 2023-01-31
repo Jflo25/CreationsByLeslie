@@ -16,7 +16,8 @@ import Contact from "./pages/Contact/Contact";
 const Layout = () => {
 
   return (
-    <div className="app bg-slate-200">
+    <div className="app bg-slate-200 w-[100%] h-screen ">
+
       
       <Navbar/>
       <Outlet /> 

@@ -25,6 +25,7 @@ module.exports = {
     },
     fontFamily: {
       logo: ['Dancing Script', 'cursive'],
+      logo2: ['Dancing Script', 'cursive'],
       page: ['Caveat', 'cursive']
     }
   
