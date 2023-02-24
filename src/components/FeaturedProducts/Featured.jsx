@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { commerce } from '../../lib/commerce';
 import Slider from './Slider';
-import  { data }  from '../List/list';
 
 
-const Featured = () => {
+
+const Featured = ( ) => {
+   const [products, setProducts] = useState([]);
+
+   const fetchProducts = async () => {
+     const {data} = await commerce.products.list();
+ 
+     setProducts(data);
+   }
+ 
+   useEffect(() => {
+     fetchProducts();
+   }, []);
   
+   console.log(products);
+
+
  return (
     <div className='container mx-auto mt-10 '>
      
@@ -15,7 +30,7 @@ const Featured = () => {
                   {/* //Marquee slider component  */}
 
        <div className="marquee  bottom gap-14 flex animate-marquee2 w-auto hover:pause max-h">
-          {data.map(item=>(
+          {products.map(item=>(
              <Slider item={item} 
              key={item._id}/>
           ))}

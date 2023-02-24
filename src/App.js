@@ -1,8 +1,13 @@
+import { useState, useEffect } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet
+  Outlet, 
+  BrowserRouter as Router,
+  Routes,
+  Route
 } from "react-router-dom"
+import { commerce } from "./lib/commerce";
 import './index.css';
 import Footer from './components/Footer/Footer'
 import Navbar from './components/Navbar/Navbar'
@@ -12,15 +17,14 @@ import About from "./pages/About/About";
 import Products from "./pages/Products/Products";
 import Contact from "./pages/Contact/Contact";
 
-
-const Layout = () => {
+const Layout = ({products }) => {
 
   return (
     <div className="app bg-slate-400 ">
 
       
       <Navbar/>
-      <Outlet /> 
+      <Outlet products={ products } /> 
       <Footer/>
       </div>
    
@@ -29,6 +33,8 @@ const Layout = () => {
 
 const router = createBrowserRouter([
   {
+    
+
     path: "/",
     element: <Layout/>,
     children:[
@@ -38,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/products/",
-        element: <Products/>
+        element: <Products />
       },
       {
         path: "/product/:id",
@@ -58,10 +64,27 @@ const router = createBrowserRouter([
   ])
 
 function App() {
+  const [products, setProducts] = useState([]);
+
+  const fetchProducts = async () => {
+   const {data} = await commerce.products.list();
+   setProducts(data);
+  };
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+  
+  
   return (
     <div >
       <RouterProvider router={router} />
-     
+     <Router>
+      <Routes>
+        <Route path="/" element={<Layout products={products}/>} />
+
+      </Routes>
+     </Router>
     </div>
   );
 }

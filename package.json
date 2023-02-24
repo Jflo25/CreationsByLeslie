@@ -5,10 +5,12 @@
   "version": "0.1.0",
 
   "private": true,
-  
+
   "homepage": "https://jflo25.github.io/CreationsByLeslie/",
 
   "dependencies": {
+
+    "@chec/commerce.js": "^2.8.0",
 
     "@emotion/react": "^11.10.5",
 
@@ -41,7 +43,6 @@
   },
 
   "scripts": {
-    
 
     "start": "react-scripts start",
 
@@ -54,8 +55,6 @@
     "test": "react-scripts test",
 
     "eject": "react-scripts eject"
-
-    
 
   },
 
