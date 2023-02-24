@@ -1,19 +1,17 @@
 {
   "files": {
-    "main.css": "/CreationsByLeslie/static/css/main.5ed560bb.css",
-    "main.js": "/CreationsByLeslie/static/js/main.60dcbaf8.js",
-    "static/media/tanhoodie2.jpg": "/CreationsByLeslie/static/media/tanhoodie2.1ceccc575bb9af44b068.jpg",
+    "main.css": "/CreationsByLeslie/static/css/main.a5585cb9.css",
+    "main.js": "/CreationsByLeslie/static/js/main.cd8c7f6e.js",
     "static/media/tanhoodie.jpg": "/CreationsByLeslie/static/media/tanhoodie.a34fbbe75f62584bf88d.jpg",
-    "static/media/greysweater.jpg": "/CreationsByLeslie/static/media/greysweater.e00c756a0674d6b25f31.jpg",
     "static/media/tansweater.jpg": "/CreationsByLeslie/static/media/tansweater.3b72791e0b8073f64004.jpg",
-    "static/media/bhoodie2.jpg": "/CreationsByLeslie/static/media/bhoodie2.9a601311a0ea93d89730.jpg",
     "static/media/bhoodie.jpg": "/CreationsByLeslie/static/media/bhoodie.192f0d9baa2ab923de82.jpg",
+    "static/media/stripeBadge.png": "/CreationsByLeslie/static/media/stripeBadge.2b09694627375253d3be.png",
     "index.html": "/CreationsByLeslie/index.html",
-    "main.5ed560bb.css.map": "/CreationsByLeslie/static/css/main.5ed560bb.css.map",
-    "main.60dcbaf8.js.map": "/CreationsByLeslie/static/js/main.60dcbaf8.js.map"
+    "main.a5585cb9.css.map": "/CreationsByLeslie/static/css/main.a5585cb9.css.map",
+    "main.cd8c7f6e.js.map": "/CreationsByLeslie/static/js/main.cd8c7f6e.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ed560bb.css",
-    "static/js/main.60dcbaf8.js"
+    "static/css/main.a5585cb9.css",
+    "static/js/main.cd8c7f6e.js"
   ]
 }
