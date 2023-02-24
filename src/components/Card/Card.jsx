@@ -7,7 +7,7 @@ const Card = ({item}) => {
 
 return (
    <Link to={'/product/${item.id}'}>
-    <div className='card max-w-[90%] max-h-2xl rounded-xl border-slate-200 border-4 overflow-hidden shadow-2xl hover:scale-110'>
+    <div className='card max-w-[90%] max-h-2xl rounded-xl border-slate-200 border-4 overflow-hidden shadow-2xl hover:scale-110 mx-auto'>
       <div className='img-container aspect-[3/2] object-contain'>
         
       <img src={item.img} alt='/' className='mainImg  w-[100%] max-h-80 object-cover ' />

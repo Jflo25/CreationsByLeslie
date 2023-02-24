@@ -63,7 +63,7 @@ export const data = [
 const List = () => {
  
   return (
-    <div className='list flex flex-wrap justify-between gap-6'>
+    <div className='list grid grid-cols-2 sm:flex sm:flex-wrap sm:justify-between gap-6 '>
       {data?.map(item=>(
          <Card item={item} key={item.id}/>
       ))}
