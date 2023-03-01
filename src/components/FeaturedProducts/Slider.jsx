@@ -8,9 +8,9 @@ const Slider = ({item}) => {
 return (
    <Link to={'/product/${item.id}'}>
     <div className='card w-[200px] h-[300px] rounded-xl border-slate-200 border-4 overflow-hidden shadow-2xl hover:scale-110'>
-      <div className='img-container aspect-[3/2] object-contain'>
+      <div className='img-container aspect-[3/2] object-contai'>
         
-      <img src={item.img} alt='/' className='mainImg  max-h-[100%] object-cover ' />
+      <img src={item.img} alt='/' className='mainImg  max-h-[100%] object-cover  ' />
       {/* <img src={item.img2} alt='/' className='mainImg' /> */}
       </div>
 

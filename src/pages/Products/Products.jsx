@@ -2,7 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import List from '../../components/List/list'
-const Products = () => {
+import ProductCard from '../../components/Card/ProductCard'
+import { Grid } from '@mui/material'
+const Products = ({products}) => {
 
    const catId = parseInt(useParams().id)
    const [maxPrice, setMaxPrice] = useState(100)
@@ -11,7 +13,7 @@ const Products = () => {
   return (
                                  //filter section 
 
-    <div className="FilterAndProducts flex w-[90%]"> 
+    <div className="FilterAndProducts flex w-[90%]  mx-auto"> 
 
       <div className="left flex-[1] sticky h-[100%] my-auto mx-10">
          <div className="filter-Item mb-8">
@@ -54,7 +56,13 @@ const Products = () => {
          <h2 className='text-center text-5xl font-page my-6'>All Products</h2>
 
          {/* <img src="" alt="" /> */}
-         <List catId={catId} maxPrice={maxPrice} />
+         <Grid container justify="center" spacing={4}>
+        {products.map((product) => (
+          <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
+            <ProductCard product={product}  />
+          </Grid>
+        ))}
+      </Grid>
       </div>
     </div>
   )
