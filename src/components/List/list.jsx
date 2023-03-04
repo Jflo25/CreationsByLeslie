@@ -58,6 +58,7 @@ export const products = [
       // oldPrice: 60,
       price: 50,
    }
+]
 
 const List = ({products}) => {
  
@@ -65,7 +66,7 @@ const List = ({products}) => {
   return (
     <div className='list flex flex-wrap justify-between gap-6'>
       {products?.map(item=>(
-         <Card item={item} key={item.id}/>
+         <ProductCard item={item} key={item.id}/>
       ))}
     </div>
 
