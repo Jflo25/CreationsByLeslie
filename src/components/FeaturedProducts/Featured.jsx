@@ -4,7 +4,6 @@ import  { products }  from '../List/list';
 
 
 const Featured = ({products}) => {
-  
  return (
     <div className='container mx-auto mt-10 '>
      
@@ -17,7 +16,7 @@ const Featured = ({products}) => {
        <div className="marquee  bottom gap-14 flex animate-marquee2 w-auto hover:pause max-h">
           {products.map(item=>(
              <Slider item={item} 
-             key={products.id1}/>
+             key={products.id}/>
           ))}
        </div>
 

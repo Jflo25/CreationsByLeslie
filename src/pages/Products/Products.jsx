@@ -62,7 +62,7 @@ const Products = ({products}) => {
          {/* <img src="" alt="" /> */}
          <div className='product-list flex flex-wrap justify-between gap-6'>
          {products?.map(item=>(
-         <Card products={products} key={products.id}/>
+         <Card item={item} key={item.id}/>
          ))}
          </div>
       </div>

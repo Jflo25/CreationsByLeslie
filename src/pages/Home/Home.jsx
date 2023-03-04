@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Featured from '../../components/FeaturedProducts/Featured'
 import Products from '../Products/Products'
 import Hero from '../../components/Hero/Hero'
-import {commerce} from '@chec/commerce.js'
+import {commerce} from '../../lib/commerce.js'
 
 const Home = () => {
   const [products, setProducts] = useState([]);
