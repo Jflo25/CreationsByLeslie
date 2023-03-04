@@ -87,3 +87,11 @@ li {
   .mobile-card {
     @apply w-[300px]
   }
+
+  .filter-categories {
+    @apply flex text-center mx-auto
+  }
+
+  .inputItem {
+    @apply pr-2 pt-3 text-slate-700 text-center mx-auto
+  }

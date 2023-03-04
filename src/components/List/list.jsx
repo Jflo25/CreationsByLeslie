@@ -1,5 +1,5 @@
-import React from 'react'
-import Card from '../Card/Card'
+import React, { useEffect, useState } from 'react'
+import ProductCard from '../Card/ProductCard'
 
 import bhoodie from '../assets/bhoodie.jpg'
 import bhoodie2 from '../assets/bhoodie2.jpg'
@@ -7,6 +7,7 @@ import tanhoodie from '../assets/tanhoodie.jpg'
 import tanhoodie2 from '../assets/tanhoodie2.jpg'
 import tansweater from '../assets/tansweater.jpg'
 import greysweater from '../assets/greysweater.jpg'
+import { commerce } from '../../lib/commerce'
  
 export const products = [
    {
@@ -58,10 +59,9 @@ export const products = [
       price: 50,
    }
 
-]
-
-const List = () => {
+const List = ({products}) => {
  
+
   return (
     <div className='list flex flex-wrap justify-between gap-6'>
       {products?.map(item=>(

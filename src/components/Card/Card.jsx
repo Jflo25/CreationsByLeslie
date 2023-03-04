@@ -1,13 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { commerce } from '../../lib/commerce';
+
+
+
 
 
 const Card = ({products}) => {
 
-
+ 
 return (
-   <Link to={'/product/${item.id}'}>
-    <div className='card max-w-[90%] max-h-2xl rounded-xl border-slate-200 border-4 overflow-hidden shadow-2xl hover:scale-110'>
+   <Link to={'/product/${products.id}'}>
+    <div className='card max-w-[90%] max-h-2xl rounded-xl border-slate-200 border-4 overflow-hidden shadow-2xl hover:scale-110 mx-auto'>
       <div className='img-container aspect-[3/2] object-contain'>
         
       <img src={products.image} alt='/' className='mainImg  w-[100%] max-h-80 object-cover ' />

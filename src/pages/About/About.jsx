@@ -8,8 +8,8 @@ const About = () => {
           
           <div className=''>
             <h1 className='text-6xl  font-logo'>About Us</h1>
-            <div className='about-statement'>
-               <p className=' text-3xl font-semibold font-page'>
+            <div className='about-statement w-full'>
+               <p className=' text-3xl font-semibold font-page text-center'>
                 At our embroidery business, we take pride in creating unique and
                 one-of-a-kind clothing. As a local small business, we are committed
                 to providing personalized service and custom designs that truly reflect the individuality of our customers.

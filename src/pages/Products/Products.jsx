@@ -12,22 +12,25 @@ const Products = ({products}) => {
   return (
                                  //filter section 
 
-    <div className="FilterAndProducts flex w-[90%]"> 
+    <div className="FilterAndProducts flex w-[90%]  mx-auto"> 
 
-      <div className="left flex-[1] sticky h-[100%] my-auto mx-10">
-         <div className="filter-Item mb-8">
+      <div className="left grid grid-cols- sm:flex-[1] sticky h-[100%] my-auto ">
+         <div className="filter-Item mb-8 ">
             <h2 className='text-4xl font-page '>Product Categories</h2>
-               <div className="inputItem">
-                  <input type="checkbox" id='1' value={1} />
-                  <label htmlFor="1" className='product-items '>Sweater</label>
-               </div>
-               <div className="inputItem">
-                  <input type="checkbox" id='2' value={2} />
-                  <label htmlFor="1" className='product-items'>Hoodie</label>
-               </div>
-               <div className="inputItem">
-                  <input type="checkbox" id='3' value={3} />
-                  <label htmlFor="1" className='product-items'>Shirts</label>
+               <div className='filter-categories '>
+
+                  <div className="inputItem">
+                     <input type="checkbox" id='1' value={1} />
+                     <label htmlFor="1" className='product-items '>Sweater</label>
+                  </div>
+                  <div className="inputItem">
+                     <input type="checkbox" id='2' value={2} />
+                     <label htmlFor="1" className='product-items'>Hoodie</label>
+                  </div>
+                  <div className="inputItem">
+                     <input type="checkbox" id='3' value={3} />
+                     <label htmlFor="1" className='product-items'>Shirts</label>
+                  </div>
                </div>
          </div>
          <div className="filter-Item">
@@ -39,14 +42,16 @@ const Products = ({products}) => {
          </div>
          <div className="filter-Item">
             <h2 className='text-4xl my-2 font-page'>Sort By</h2>
+            <div className="filter-categories">
                <div className="inputItem">
                   <input type="radio" id='asc' value='asc' name='price' onChange={e=>setSort('asc')}/>
-                  <label htmlFor="asc" className='product-items'>Price (Lowest first)</label>
+                  <label htmlFor="asc" className='product-items'>Price (Lowest)</label>
                </div>
                <div className="inputItem">
                   <input type="radio" id='desc' value='desc' name='price' onChange={e=>setSort('desc')}/>
-                  <label htmlFor="desc" className='product-items'>Price (Highest first)</label>
+                  <label htmlFor="desc" className='product-items'>Price (Highest)</label>
                </div>
+            </div>
          </div>
       </div>
                   {/* actual products list  */}
