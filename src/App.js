@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar'
 import Home from "./pages/Home/Home";
 import Product from "./pages/Product/Product";
 import About from "./pages/About/About";
-// import Products from "./pages/Products/Products";
+import Products from "./pages/Products/Products";
 import Contact from "./pages/Contact/Contact";
 import {commerce} from './lib/commmece'
 
@@ -32,7 +32,7 @@ function App() {
       <Routes>
          <Route path="/" element={<Home/>} />
          <Route path="/product" element={<Product />} /> 
-         {/* <Route path="/products" element={products.length > 0 ? <Products products={products}/> : null} /> */}
+         <Route path="/products" element={<Products />} />
          <Route path="/about-us" element={<About />} />
          <Route path="/contact" element={<Contact/>} /> 
       </Routes>

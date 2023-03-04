@@ -3,13 +3,43 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 import Card from '../../components/Card/Card'
-import {commerce} from '@chec/commerce.js'
-const Products = ({products}) => {
+import {commerce} from '../../lib/commerce.js'
+
+const Products = () => {
+   const [products, setProducts] = useState([]);
+   const [isLoading, setIsLoading] = useState(true);
+   const [error, setError] = useState(null);
+   const catId = parseInt(useParams().id);
+   const [maxPrice, setMaxPrice] = useState(100);
+   const [sort, setSort] = useState(null);
+
+ 
+ const fetchProducts = async () => {
+     try {
+       const { data } = await commerce.products.list();
+       setProducts(data);
+       setIsLoading(false);
+     } catch (error) {
+       console.log("Error fetching products:", error);
+       setError(error);
+       setIsLoading(false);
+     }
+   };
+ 
+   useEffect(() => {
+     fetchProducts();
+   }, []);
+ 
+   if (isLoading) {
+     return <p className='font-page text-4xl text-center'>Loading products...</p>;
+   }
+ 
+   if (error) {
+     return <p>Error fetching products: {error.message}</p>;
+   };
 
 
-   const catId = parseInt(useParams().id)
-   const [maxPrice, setMaxPrice] = useState(100)
-   const [sort, setSort] = useState(null)
+   
 
   return (
                                  //filter section 

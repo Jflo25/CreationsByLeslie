@@ -26,7 +26,7 @@ const fetchProducts = async () => {
   }, []);
 
   if (isLoading) {
-    return <p>Loading products...</p>;
+    return <p className='font-page text-4xl text-center'>Loading products...</p>;
   }
 
   if (error) {
@@ -35,8 +35,8 @@ const fetchProducts = async () => {
   return (
     <div>
       <Hero/>
-      {products.length > 0 && <Featured products={products}/>}
-      {products.length > 0 && <Products products={products}/>}
+       <Featured products={products}/>
+       <Products />
     </div>
   )
 }
