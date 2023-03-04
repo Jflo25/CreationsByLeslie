@@ -17,7 +17,7 @@ const Featured = ({products}) => {
        <div className="marquee  bottom gap-14 flex animate-marquee2 w-auto hover:pause max-h">
           {products.map(item=>(
              <Slider item={item} 
-             key={products.id1}/>
+             key={products.id}/>
           ))}
        </div>
 
