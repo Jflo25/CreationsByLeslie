@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import List from '../../components/List/list'
-const Products = () => {
+
+import Card from '../../components/Card/Card'
+const Products = ({products}) => {
 
    const catId = parseInt(useParams().id)
    const [maxPrice, setMaxPrice] = useState(100)
@@ -54,7 +55,11 @@ const Products = () => {
          <h2 className='text-center text-5xl font-page my-6'>All Products</h2>
 
          {/* <img src="" alt="" /> */}
-         <List catId={catId} maxPrice={maxPrice} />
+         <div className='product-list flex flex-wrap justify-between gap-6'>
+         {products?.map(item=>(
+         <Card products={products} key={products.id}/>
+         ))}
+         </div>
       </div>
     </div>
   )

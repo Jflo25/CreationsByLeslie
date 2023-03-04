@@ -1,9 +1,9 @@
 import React from 'react'
 import Slider from './Slider';
-import  { data }  from '../List/list';
+import  { products }  from '../List/list';
 
 
-const Featured = () => {
+const Featured = ({products}) => {
   
  return (
     <div className='container mx-auto mt-10 '>
@@ -15,9 +15,9 @@ const Featured = () => {
                   {/* //Marquee slider component  */}
 
        <div className="marquee  bottom gap-14 flex animate-marquee2 w-auto hover:pause max-h">
-          {data.map(item=>(
+          {products.map(item=>(
              <Slider item={item} 
-             key={item._id}/>
+             key={products.id1}/>
           ))}
        </div>
 
