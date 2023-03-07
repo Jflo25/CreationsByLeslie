@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Featured from '../../components/FeaturedProducts/Featured'
-import Products from '../Products/Products'
 import Hero from '../../components/Hero/Hero'
 import {commerce} from '../../lib/commerce.js'
+import ProductsList from '../../components/HomeProducts.jsx/ProductsList'
+import Filter from '../../components/HomeProducts.jsx/Filter'
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -36,7 +37,10 @@ const fetchProducts = async () => {
     <div>
       <Hero/>
        <Featured products={products}/>
-       <Products />
+       <div >
+        <Filter/>
+        <ProductsList products={products}/>
+       </div>
     </div>
   )
 }

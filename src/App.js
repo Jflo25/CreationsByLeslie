@@ -25,7 +25,7 @@ function App() {
     
   // }, []);
   return (
-    <div>
+    <div className="app bg-slate-200 ">
 
     <Router>
     <Navbar/>
