@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import Slider from './Slider';
-import  { products }  from '../List/list';
 
 
 const Featured = ({products}) => {
@@ -17,7 +16,7 @@ const Featured = ({products}) => {
        <div className="marquee  bottom gap-14 flex animate-marquee2 w-auto hover:pause max-h">
           {products.map(item=>(
              <Slider item={item} 
-             key={products.id}/>
+             key={item.id}/>
           ))}
        </div>
 

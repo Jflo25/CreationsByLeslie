@@ -12,9 +12,9 @@ const ProductsList = ({products}) => {
       </h2>
 
       <div className='product-list mx-5'>
-        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4  gap-5 '>
+        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3  gap-5 '>
          {products?.map(item=>(
-         <Card item={item} key={item.id} />
+         <Card item={item} key={item.id} products={products}/>
          ))};
          </div> 
       </div>

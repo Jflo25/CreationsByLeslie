@@ -36,11 +36,12 @@ const fetchProducts = async () => {
   return (
     <div>
       <Hero/>
-       <Featured products={products}/>
-       <div >
-        <Filter/>
-        <ProductsList products={products}/>
-       </div>
+      <Featured products={products}/>
+        <div className='w-[400px] mx-auto'>
+          <Filter/>
+        </div>
+      <ProductsList products={products}/>
+       
     </div>
   )
 }

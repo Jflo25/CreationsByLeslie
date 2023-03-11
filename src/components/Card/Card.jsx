@@ -10,7 +10,7 @@ const Card = ({item}) => {
 
  
 return (
-  <Link to={'/product/${item.id}'}>
+  <Link to={`product/${item.id}`}>
   <div className='product-card max-w-[200px] max-h-[300px] md:max-w-[300px] md:max-h-[400px] rounded-xl border-slate-200 border-4 overflow-hidden shadow-2xl hover:scale-110 mx-auto'>
     <div className='  '>
       <div className='img-container '>

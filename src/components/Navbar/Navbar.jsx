@@ -24,7 +24,7 @@ const Navbar = () => {
   <h1 onClick={handleNav} className={logo ? 'hidden' : 'font-logo '}>Creations by Leslie</h1>
 </div>
 <ul className='nav-list hidden md:flex font-page  '>
-    <Link to='/' smooth={true} duration={500}><li className=''>Home</li></Link>
+    <Link to='/CreationsByLeslie' smooth={true} duration={500}><li className=''>Home</li></Link>
     <Link to='/Products' smooth={true} duration={500} ><li className=''>Products</li></Link>
     <Link to='/Contact' smooth={true} duration={500}><li>Contact</li></Link>
     <Link to='/About' smooth={true} duration={500}><li>About</li></Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
 <div onClick={handleNav} className={nav ? 'absolute text-slate-800 left-0 top-0 w-full bg-gray-100/90 px-4 py-7 flex flex-col' : 'absolute left-[-100%]'}>
   <ul className='mobile-nav'> 
     <h1 className='font-logo pb-5 md:hidden'> Creations By Leslie</h1>
-    <Link to='/' smooth={true} duration={500}><li className=''>Home</li></Link>
+    <Link to='/CreationsByLeslie' smooth={true} duration={500}><li className=''>Home</li></Link>
     <Link to='/Products' smooth={true} duration={500} ><li>Products</li></Link>
     <Link to='/Contact' smooth={true} duration={500}><li>Contact</li></Link>
     <Link to='/About' smooth={true} duration={500}><li>About</li></Link>

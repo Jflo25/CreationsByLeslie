@@ -20,7 +20,7 @@
 }
 
 .product-items {
-  @apply font-medium text-xl mb-5 pl-1 font-page sm:text-2xl lg:text-3xl
+  @apply font-medium text-xl mb-5 pl-1 font-page sm:text-2xl lg:text-3xl text-neutral-400
 }
 
 .product-mini {

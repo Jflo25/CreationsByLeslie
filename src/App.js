@@ -12,25 +12,14 @@ import {commerce} from './lib/commmece'
 
 
 function App() {
-  const [products, setProducts] = useState([]);
-
-  // const fetchProducts = async () => {
-  //   const { data } = await commerce.products.list();
-
-  //   setProducts(data);
-  // };
-
-  // useEffect(() => {
-  //   fetchProducts();
-    
-  // }, []);
+  
   return (
     <div className="app bg-slate-200 ">
 
     <Router>
     <Navbar/>
       <Routes>
-         <Route path="/" element={<Home/>} />
+         <Route path="/CreationsByLeslie" element={<Home/>} />
          <Route path="/product" element={<Product />} /> 
          <Route path="/products" element={<Products />} />
          <Route path="/about-us" element={<About />} />

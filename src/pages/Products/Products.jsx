@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 import Card from '../../components/Card/Card'
 import {commerce} from '../../lib/commerce.js'
@@ -39,20 +39,23 @@ const Products = () => {
    
 
   return (
-                                 //filter section 
-
-    <div className="FilterAndProducts max-w-full mx-auto"> 
-         <Filter/>
-
+   <div className="FilterAndProducts max-w-full mx-auto"> 
+                  {/* //filter section  */}
+      <div className='w-[400px] mx-auto'>
+      <Filter/>
+      </div>
+      
                   {/* actual products list  */}
 
       <div className="right flex-[6]  ">
-         <h2 className='text-center text-5xl font-page my-6'>All Products</h2>
+         <h2 className='text-center text-5xl font-page my-6 '>All Products</h2>
 
          {/* <img src="" alt="" /> */}
-         <div className='product-list grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 mx-5 '>
+         <div className='product-list grid grid-cols-2 sm:grid-cols-3  gap-5 mx-5 '>
          {products?.map(item=>(
-         <Card item={item} key={item.id}/>
+         <Link key={products.id} to={`/products/${products.id}`}>
+         <Card item={item} key={item.id} products={products} />
+         </Link>
          ))}
          </div>
       </div>

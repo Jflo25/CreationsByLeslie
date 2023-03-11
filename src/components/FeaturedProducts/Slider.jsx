@@ -6,7 +6,7 @@ const Slider = ({item}) => {
 
 
 return (
-<Link to={'/product/${item.id}'}>
+<Link to={`product/${item.id}`}>
     <div className='product-card max-w-[200px] max-h-[300px] rounded-xl border-slate-200 border-4 overflow-hidden shadow-2xl hover:scale-110 mx-auto'>
       <div className='w-[200px] h-[300px]'>
         <div className='img-container aspect-[3/2] object-contain'>

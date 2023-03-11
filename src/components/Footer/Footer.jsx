@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="footer-links  mx-auto ">
           <h1 className='footer-links font-page text-4xl'>Links</h1>
           <div className="center  hover:scale-110">
-              <Link to="/" className='font-page text-2xl'>Home</Link> 
+              <Link to="/CreationsByLeslie" className='font-page text-2xl'>Home</Link> 
             </div>
             <div className="center  hover:scale-110">
               <Link to="/About" className='font-page text-2xl'>About</Link> 
