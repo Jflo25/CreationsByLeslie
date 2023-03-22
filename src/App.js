@@ -13,6 +13,11 @@ import {commerce} from './lib/commmece'
 
 function App() {
   
+
+
+
+  
+
   return (
     <div className="app bg-slate-200 ">
 
@@ -20,7 +25,7 @@ function App() {
     <Navbar/>
       <Routes>
          <Route path="/CreationsByLeslie" element={<Home/>} />
-         <Route path="/product" element={<Product />} /> 
+         <Route path="/product/:id" element={<Product />} /> 
          <Route path="/products" element={<Products />} />
          <Route path="/about-us" element={<About />} />
          <Route path="/contact" element={<Contact/>} /> 

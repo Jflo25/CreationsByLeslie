@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import Product from '../../pages/Product/Product'
 import Card from '../Card/Card'
 
 
@@ -14,8 +16,11 @@ const ProductsList = ({products}) => {
       <div className='product-list mx-5'>
         <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3  gap-5 '>
          {products?.map(item=>(
-         <Card item={item} key={item.id} products={products}/>
+         <Link to={`/product/${item.id}`}  element={<Product/>}  key={item.id} >  
+         <Card item={item}/>
+         </Link>
          ))};
+
          </div> 
       </div>
     </div>    

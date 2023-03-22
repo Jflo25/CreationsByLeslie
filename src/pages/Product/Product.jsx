@@ -1,52 +1,54 @@
-import React, {useEffect, useState} from 'react'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import {commerce} from '../../lib/commerce.js'
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Card from '../../components/Card/Card.jsx';
+import {commerce} from '../../lib/commerce.js';
 
-const Product = ({item}) => {
-   const { id } = useParams();
-   const [products, setProducts] = useState([]);
-   const [isLoading, setIsLoading] = useState(true);
-   const [error, setError] = useState(null);
+function Product() {
+  const [item, setItem] = useState(null);
+  const { id } = useParams();
 
- 
-const fetchProducts = async () => {
-     try {
-       const { data } = await commerce.products.retrieve(id);
-       setProducts(data);
-       setIsLoading(false);
-     } catch (error) {
-       console.log("Error fetching product id id: ${id}:", error);
-       setError(error);
-       setIsLoading(false);
-     }
-   };
+  useEffect(() => {
+    const fetchProduct = async () => {
+      const product = await commerce.products.retrieve(id);
+      setItem(product);
+    };
 
-   
+    fetchProduct();
+  }, [id]);
 
- 
-   useEffect(() => {
-     fetchProducts();
-   }, []);
- 
-   if (isLoading) {
-     return <p className='font-page text-4xl text-center'>Loading product...</p>;
-   }
- 
-   if (error) {
-     return <p>Error fetching products: {error.message}</p>;
-   };
-
-
-   
+  if (!item) {
+    return <div>Loading...</div>;
+  }
 
   return (
-   <div className='container mx-auto mt-8'>
-   <Card item={item} key={item.id} showAddToCart={false} />
- </div>
-);
-
+   <div>
+        <section className="text-gray-700 body-font overflow-hidden bg-white">
+      <div className="container px-5 py-24 mx-auto">
+        <div className="lg:w-4/5 mx-auto flex flex-wrap">
+          <img
+            alt="ecommerce"
+            className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"
+            src={item.image.url}
+          />
+          <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+            <h2 className="text-sm title-font text-gray-500 tracking-widest">
+              Creations by Leslie
+            </h2>
+            <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">
+              {item.name}
+            </h1>
+            <p className='mt-10'>
+              {item.description}
+            </p>
+          
+          </div>
+          
+          
+          
+        </div> 
+       </div> 
+      </section> 
+   </div>
+  );
 }
-export default Product
+
+export default Product;

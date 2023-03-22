@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import Slider from './Slider';
-
+import Product from '../../pages/Product/Product';
 
 const Featured = ({products}) => {
   
@@ -15,8 +16,9 @@ const Featured = ({products}) => {
 
        <div className="marquee  bottom gap-14 flex animate-marquee2 w-auto hover:pause max-h">
           {products.map(item=>(
-             <Slider item={item} 
-             key={item.id}/>
+            <Link to={`/product/${item.id}`} element={<Product/>}  key={item.id}>
+               <Slider item={item}/>
+            </Link> 
           ))}
        </div>
 

@@ -4,7 +4,8 @@ import { Link, useParams } from 'react-router-dom'
 
 import Card from '../../components/Card/Card'
 import {commerce} from '../../lib/commerce.js'
-import Filter from '../../components/HomeProducts.jsx/Filter'
+import Filter from '../../components/HomeProducts/Filter'
+import Product from '../Product/Product'
 const Products = () => {
    const [products, setProducts] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
@@ -53,8 +54,8 @@ const Products = () => {
          {/* <img src="" alt="" /> */}
          <div className='product-list grid grid-cols-2 sm:grid-cols-3  gap-5 mx-5 '>
          {products?.map(item=>(
-         <Link key={products.id} to={`/products/${products.id}`}>
-         <Card item={item} key={item.id} products={products} />
+         <Link to={`/product/${item.id}`}  element={<Product/>}  key={item.id}>
+         <Card item={item}  />
          </Link>
          ))}
          </div>

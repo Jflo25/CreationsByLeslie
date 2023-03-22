@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import Featured from '../../components/FeaturedProducts/Featured'
 import Hero from '../../components/Hero/Hero'
 import {commerce} from '../../lib/commerce.js'
-import ProductsList from '../../components/HomeProducts.jsx/ProductsList'
-import Filter from '../../components/HomeProducts.jsx/Filter'
+import ProductsList from '../../components/HomeProducts/ProductsList'
+import Filter from '../../components/HomeProducts/Filter'
 
 const Home = () => {
   const [products, setProducts] = useState([]);
